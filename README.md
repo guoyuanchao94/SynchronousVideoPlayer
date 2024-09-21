@@ -19,7 +19,7 @@ Failed to create QVideoSink "Not available"
 
 可以使用QT6.5.3和6.6.3 mingw64编译器正常编译。
 
-#潜在问题
+# 潜在问题
 本项目完全采用Qt6多媒体模块,存在D3D11:Removing Devices错误，出现该错误再拖动进度条会导致程序崩溃。
 
 # HTTP服务
