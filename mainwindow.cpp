@@ -192,28 +192,6 @@ void MainWindow::readDirectoryFilesRecursively(const QString &directoryPath, QVe
     }
 }
 
-QString MainWindow::getWlanIPAddress()
-{
-    // 遍历所有网络接口
-    foreach (const QNetworkInterface &interface, QNetworkInterface::allInterfaces())
-    {
-        // 检查接口名称是否包含 "WLAN"
-        if (interface.humanReadableName().contains("WLAN", Qt::CaseInsensitive))
-        {
-            // 遍历该接口的所有IP地址
-            foreach (const QNetworkAddressEntry &entry, interface.addressEntries())
-            {
-                // 只考虑 IPv4 地址
-                if (entry.ip().protocol() == QAbstractSocket::IPv4Protocol)
-                {
-                    return entry.ip().toString();
-                }
-            }
-        }
-    }
-    return QString();
-}
-
 //设置网络和单个本地的视频的视频源
 //打开URL,点击确认后的发射urlSet的槽函数
 void MainWindow::setVideoSource(QString url)

@@ -43,7 +43,6 @@ public:
     void sendTimestamp();
     void readFile(const QString &filePath);
     void readDirectoryFilesRecursively(const QString &directoryPath, QVector<QString> &files);
-    QString getWlanIPAddress();   //获取WLAN接口的IP地址
 protected:
     bool eventFilter(QObject *object, QEvent *event) override;
     // void resizeEvent(QResizeEvent *event) override;
