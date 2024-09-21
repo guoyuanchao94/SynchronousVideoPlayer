@@ -20,7 +20,11 @@ Failed to create QVideoSink "Not available"
 可以使用QT6.5.3和6.6.3 mingw64编译器正常编译。
 
 # 潜在问题
-本项目完全采用Qt6多媒体模块,存在D3D11:Removing Devices错误，出现该错误再拖动进度条会导致程序崩溃。
+本项目完全采用Qt6多媒体模块,频繁切换媒体源会导致D3D11:Removing Devices错误，出现该错误再拖动进度条会导致程序崩溃
+
+Unbutu 22.04.4版本GCC构建存在qt.multimedia.ffmpeg.libsymbolsresolver: Couldn't load VAAPI library问题
+
+QVideoWidget组件在没有播放视频时,出现其他画面
 
 # HTTP服务
 服务端需开启HTTP服务，才能将本地文件路径转换成HTTP服务路径，其他主机才能播放
