@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>851</width>
+    <height>563</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>同步视频播放器</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout_5" stretch="3,1">
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout" stretch="8,1,1">
+      <item>
+       <widget class="QVideoWidget" name="videoDisplay" native="true"/>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <widget class="QSlider" name="seekSlider">
+          <property name="orientation">
+           <enum>Qt::Orientation::Horizontal</enum>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QWidget" name="widget" native="true">
+          <layout class="QHBoxLayout" name="horizontalLayout_4">
+           <item>
+            <widget class="QLabel" name="labelPosition">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="labelDuration">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <item>
+         <widget class="QPushButton" name="buttonPlay">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>播放</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="buttonPause">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>暂停</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="buttonStop">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>停止</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnPlayList">
+          <property name="text">
+           <string>播放列表</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="buttonFullScreen">
+          <property name="text">
+           <string>全屏</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_2">
+          <property name="text">
+           <string>音量</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QSlider" name="volumeSlider">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Orientation::Horizontal</enum>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="volumeLabel">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>30</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="text">
+           <string> 10%</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QVBoxLayout" name="chatLayout">
+      <item>
+       <layout class="QVBoxLayout" name="participantsLayout">
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <item>
+           <widget class="QLabel" name="label">
+            <property name="text">
+             <string>参与者:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="muteButton">
+            <property name="text">
+             <string>麦克风静音</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QListWidget" name="participantsWidget">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>200</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>200</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QListWidget" name="chatWidget"/>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="chatInputLayout">
+        <item>
+         <widget class="QLineEdit" name="chatInput"/>
+        </item>
+        <item>
+         <widget class="QPushButton" name="sendButton">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>发送</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>851</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>文件</string>
+    </property>
+    <addaction name="actionOpen_URL"/>
+    <addaction name="actOpenLocalFile"/>
+    <addaction name="action_Open_Directory"/>
+   </widget>
+   <widget class="QMenu" name="menuConnect">
+    <property name="title">
+     <string>连接</string>
+    </property>
+    <addaction name="actionStart_Server"/>
+    <addaction name="actionConnect_to_Server"/>
+   </widget>
+   <widget class="QMenu" name="menuSettings">
+    <property name="title">
+     <string>设置</string>
+    </property>
+    <widget class="QMenu" name="menuChange_Theme">
+     <property name="title">
+      <string>选择主题</string>
+     </property>
+     <addaction name="actionCombinear"/>
+     <addaction name="actionFilmovio"/>
+     <addaction name="actionMyWatch"/>
+     <addaction name="actionObit"/>
+     <addaction name="actionPerstfic"/>
+     <addaction name="actionVisualScript"/>
+     <addaction name="actionWstartpage"/>
+    </widget>
+    <addaction name="menuChange_Theme"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuConnect"/>
+   <addaction name="menuSettings"/>
+  </widget>
+  <action name="actionOpen_URL">
+   <property name="text">
+    <string>打开网络链接</string>
+   </property>
+   <property name="toolTip">
+    <string>打开链接或本地文件</string>
+   </property>
+  </action>
+  <action name="actionStart_Server">
+   <property name="text">
+    <string>启动服务</string>
+   </property>
+  </action>
+  <action name="actionConnect_to_Server">
+   <property name="text">
+    <string>连接服务</string>
+   </property>
+  </action>
+  <action name="actionCombinear">
+   <property name="text">
+    <string>Combinear</string>
+   </property>
+  </action>
+  <action name="actionFilmovio">
+   <property name="text">
+    <string>Filmovio</string>
+   </property>
+  </action>
+  <action name="actionMyWatch">
+   <property name="text">
+    <string>MyWatch</string>
+   </property>
+  </action>
+  <action name="actionObit">
+   <property name="text">
+    <string>Obit</string>
+   </property>
+  </action>
+  <action name="actionPerstfic">
+   <property name="text">
+    <string>Perstfic</string>
+   </property>
+  </action>
+  <action name="actionVisualScript">
+   <property name="text">
+    <string>VisualScript</string>
+   </property>
+  </action>
+  <action name="actionWstartpage">
+   <property name="text">
+    <string>Wstartpage</string>
+   </property>
+  </action>
+  <action name="action_Open_Directory">
+   <property name="text">
+    <string>打开文件夹</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::MenuRole::NoRole</enum>
+   </property>
+  </action>
+  <action name="actOpenLocalFile">
+   <property name="text">
+    <string>打开本地文件</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::MenuRole::NoRole</enum>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QVideoWidget</class>
+   <extends>QWidget</extends>
+   <header location="global">QVideoWidget</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
