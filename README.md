@@ -7,7 +7,9 @@
 
 # MP4 格式
 西瓜视频 Demo：https://sf1-cdn-tos.huoshanstatic.com/obj/media-fe/xgplayer_doc_video/mp4/xgplayer-demo-360p.mp4
+
 新闻视频1：https://stream7.iqilu.com/10339/upload_transcode/202002/09/20200209105011F0zPoYzHry.mp4
+
 新闻视频2：https://stream7.iqilu.com/10339/upload_transcode/202002/09/20200209104902N3v5Vpxuvb.mp4
 
 # 编译报错排查
